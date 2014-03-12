@@ -1,0 +1,26 @@
+1. install
+
+  sudo gem install cucumber
+  sudo gem install capybara
+  sudo gem install selenium-webdriver
+
+  Warning. For mac os x and xcode 5.1 looking for "-Wno-error" in xcode reliase notes (https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Introduction/Introduction.html)
+
+2. Setup
+  Project:
+  
+  mobileConnectAutoTestsHub\
+    features/
+      mpcDemo.feature
+      step_definitions/
+        mpcDemo_steps.rb
+      support/
+        env.rb
+
+  open env.rb loking for driver settings and change value for browser and profile (optional)
+
+  3. Make tests and run it.
+  For example 
+  mpcDemo.feature - basic authorization tests
+  mpcDemo_steps.rb - step definition for this tests
+  run$ cucumber ./features/mpcDemo.feature
